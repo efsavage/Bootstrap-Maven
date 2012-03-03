@@ -1,7 +1,7 @@
 Bootstrap for Maven
 =============
 
-This library gives you a way to drop bootstrap into your project as a Maven dependency, which makes your own repository smaller.
+This library gives you a way to drop [Twitter Bootstrap](http://twitter.github.com/bootstrap) into your project as a [Maven](maven.apache.org) dependency, which mens you don't have to include these third party files in your own source control.
 
 pom.xml
 -------
@@ -13,6 +13,16 @@ Add this to the <dependencies> element of your pom.xml
 			<artifactId>twitter-bootstrap</artifactId>
 			<version>2.0.1</version>
 		</dependency>
+
+Usage
+-------
+The files will "mount" themselves at the following URLs:
+
+* /ext/css/bootstrap.css
+* /ext/css/bootstrap-responsive.css
+* /ext/js/bootstrap.js
+* /ext/img/glyphicons-halflings.png (referenced from the css files)
+* /ext/img/glyphicons-halflings-white.png (referenced from the css files)
 
 Requirements
 -------
