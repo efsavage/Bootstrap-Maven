@@ -38,15 +38,15 @@ import javax.servlet.http.HttpServletResponse;
 public class BootstrapJavaScriptServlet extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/js");
-		PrintWriter out = resp.getWriter();
+		final PrintWriter out = resp.getWriter();
 		String src = "/com/twitter/bootstrap/js/bootstrap.min.js";
 		if ("false".equals(req.getParameter("min"))) {
 			src = "/com/twitter/bootstrap/js/bootstrap.js";
 		}
-		InputStream jsStream = getClass().getResourceAsStream(src);
-		String js = new Scanner(jsStream).useDelimiter("\\A").next();
+		final InputStream jsStream = getClass().getResourceAsStream(src);
+		final String js = new Scanner(jsStream).useDelimiter("\\A").next();
 		out.write(js);
 	}
 

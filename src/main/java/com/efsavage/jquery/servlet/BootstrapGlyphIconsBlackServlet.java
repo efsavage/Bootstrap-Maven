@@ -37,12 +37,12 @@ import javax.servlet.http.HttpServletResponse;
 public class BootstrapGlyphIconsBlackServlet extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("image/png");
-		PrintWriter out = resp.getWriter();
-		String src = "/com/twitter/bootstrap/img/glyphicons-halflings.png";
-		InputStream imgStream = getClass().getResourceAsStream(src);
-		String img = new Scanner(imgStream).useDelimiter("\\A").next();
+		final PrintWriter out = resp.getWriter();
+		final String src = "/com/twitter/bootstrap/img/glyphicons-halflings.png";
+		final InputStream imgStream = getClass().getResourceAsStream(src);
+		final String img = new Scanner(imgStream).useDelimiter("\\A").next();
 		out.write(img);
 	}
 

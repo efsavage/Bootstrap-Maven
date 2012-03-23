@@ -39,15 +39,15 @@ import javax.servlet.http.HttpServletResponse;
 public class BootstrapCssResponsiveServlet extends HttpServlet {
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/css");
-		PrintWriter out = resp.getWriter();
+		final PrintWriter out = resp.getWriter();
 		String src = "/com/twitter/bootstrap/css/bootstrap-responsive.min.css";
 		if ("false".equals(req.getParameter("min"))) {
 			src = "/com/twitter/bootstrap/css/bootstrap-responsive.css";
 		}
-		InputStream cssStream = getClass().getResourceAsStream(src);
-		String css = new Scanner(cssStream).useDelimiter("\\A").next();
+		final InputStream cssStream = getClass().getResourceAsStream(src);
+		final String css = new Scanner(cssStream).useDelimiter("\\A").next();
 		out.write(css);
 	}
 
