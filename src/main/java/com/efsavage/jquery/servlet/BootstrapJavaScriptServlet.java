@@ -39,7 +39,7 @@ public class BootstrapJavaScriptServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("text/js");
+		resp.setContentType("text/javascript");
 		final PrintWriter out = resp.getWriter();
 		String src = "/com/twitter/bootstrap/js/bootstrap.min.js";
 		if ("false".equals(req.getParameter("min"))) {
