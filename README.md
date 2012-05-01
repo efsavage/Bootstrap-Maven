@@ -11,7 +11,7 @@ Add this to the <dependencies> element of your pom.xml
 		<dependency>
 			<groupId>com.efsavage</groupId>
 			<artifactId>twitter-bootstrap</artifactId>
-			<version>2.0.1</version>
+			<version>2.0.3</version>
 		</dependency>
 
 Usage
