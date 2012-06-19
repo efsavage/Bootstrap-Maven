@@ -17,8 +17,7 @@ package com.efsavage.jquery.servlet;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
-import java.util.Scanner;
+import java.io.OutputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,17 +32,20 @@ import javax.servlet.http.HttpServletResponse;
  *         href="mailto:code@efsavage.com">code@efsavage.com</a>.
  * 
  */
-@WebServlet(urlPatterns = "/ext/img/glyphicons-halflings-white.png")
+@WebServlet(urlPatterns = "/ext/bootstrap/img/glyphicons-halflings-white.png")
 public class BootstrapGlyphIconsWhiteServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("image/png");
-		final PrintWriter out = resp.getWriter();
 		final String src = "/com/twitter/bootstrap/img/glyphicons-halflings-white.png";
 		final InputStream imgStream = getClass().getResourceAsStream(src);
-		final String img = new Scanner(imgStream).useDelimiter("\\A").next();
-		out.write(img);
+		OutputStream out = resp.getOutputStream();
+		final byte[] buffer = new byte[1024];
+		int read;
+		while ((read = imgStream.read(buffer)) != -1) {
+			out.write(buffer, 0, read);
+		}
 	}
 
 }

@@ -34,7 +34,7 @@ import javax.servlet.http.HttpServletResponse;
  *         href="mailto:code@efsavage.com">code@efsavage.com</a>.
  * 
  */
-@WebServlet(urlPatterns = "/ext/css/bootstrap.css")
+@WebServlet(urlPatterns = "/ext/bootstrap/css/bootstrap.css")
 public class BootstrapCssServlet extends HttpServlet {
 
 	@Override
