@@ -1,5 +1,6 @@
 Bootstrap for Maven
 =============
+[![Build Status](https://secure.travis-ci.org/efsavage/Bootstrap-Maven.png?branch=master)](http://travis-ci.org/efsavage/Bootstrap-Maven)
 
 This library gives you a way to drop [Twitter Bootstrap](http://twitter.github.com/bootstrap) into your project as a [Maven](maven.apache.org) dependency, which means you don't have to include these third party files in your own source control.
 
