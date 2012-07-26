@@ -12,7 +12,7 @@ Add this to the <dependencies> element of your pom.xml
 		<dependency>
 			<groupId>com.efsavage</groupId>
 			<artifactId>twitter-bootstrap</artifactId>
-			<version>2.0.4</version>
+			<version>2.0.4.2</version>
 		</dependency>
 
 Usage
