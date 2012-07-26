@@ -3,7 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.efsavage</groupId>
 	<artifactId>twitter-bootstrap</artifactId>
-	<version>2.0.4</version>
+	<version>2.0.4.1</version>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/efsavage/Bootstrap-Maven</url>
+	</scm>
 
 	<distributionManagement>
 		<repository>

@@ -13,11 +13,12 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-package com.efsavage.jquery.servlet;
+package com.efsavage.twitter.bootstrap.servlet;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,26 +27,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Returns the black version of the icon sprite.
+ * Returns the Bootstrap core JavaScript file. Add "min=false" parameter to get
+ * the full non-minified version.
  * 
  * @author <a href="http://efsavage.com">Eric F. Savage</a>, <a
  *         href="mailto:code@efsavage.com">code@efsavage.com</a>.
  * 
  */
-@WebServlet(urlPatterns = "/ext/bootstrap/img/glyphicons-halflings.png")
-public class BootstrapGlyphIconsBlackServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/ext/bootstrap/js/bootstrap.js")
+public class BootstrapJavaScriptServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) throws ServletException, IOException {
-		resp.setContentType("image/png");
-		final String src = "/com/twitter/bootstrap/img/glyphicons-halflings.png";
-		final InputStream imgStream = getClass().getResourceAsStream(src);
-		OutputStream out = resp.getOutputStream();
-		final byte[] buffer = new byte[1024];
-		int read;
-		while ((read = imgStream.read(buffer)) != -1) {
-			out.write(buffer, 0, read);
+		resp.setContentType("text/javascript");
+		final PrintWriter out = resp.getWriter();
+		String src = "/com/twitter/bootstrap/js/bootstrap.min.js";
+		if ("false".equals(req.getParameter("min"))) {
+			src = "/com/twitter/bootstrap/js/bootstrap.js";
 		}
+		final InputStream jsStream = getClass().getResourceAsStream(src);
+		final String js = new Scanner(jsStream).useDelimiter("\\A").next();
+		out.write(js);
 	}
 
 }
