@@ -1,9 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.efsavage.twitter.bootstrap</groupId>
 	<artifactId>bootstrap-maven</artifactId>
-	<version>2.0.4</version>
+	<version>2.0.4-SNAPSHOT</version>
+	<name>Twitter Bootstrap for Maven</name>
+	<description>This library gives you a way to drop Twitter Bootstrap into your project as a Maven dependency, which means you don't have to include these third party files in your own source control.</description>
 
 	<licenses>
 		<license>
@@ -14,25 +23,12 @@
 	</licenses>
 
 	<scm>
-		<url>https://github.com/efsavage/Bootstrap-Maven</url>
+		<connection>scm:git:git@github.com:efsavage/Bootstrap-Maven.git</connection>
+		<developerConnection>scm:git:git@github.com:efsavage/Bootstrap-Maven.git</developerConnection>
+		<url>git@github.com:efsavage/Bootstrap-Maven.git</url>
 	</scm>
 
-	<distributionManagement>
-		<repository>
-			<id>efsavage-s3-repo</id>
-			<name>efsavage public s3 repository</name>
-			<url>s3://repo.efsavage.com/release</url>
-		</repository>
-	</distributionManagement>
-
 	<build>
-		<extensions>
-			<extension>
-				<groupId>org.springframework.build.aws</groupId>
-				<artifactId>org.springframework.build.aws.maven</artifactId>
-				<version>3.0.0.RELEASE</version>
-			</extension>
-		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
