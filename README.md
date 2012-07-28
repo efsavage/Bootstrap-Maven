@@ -1,4 +1,4 @@
-Bootstrap for Maven
+Twitter Bootstrap for Maven
 =============
 [![Build Status](https://secure.travis-ci.org/efsavage/Bootstrap-Maven.png?branch=master)](http://travis-ci.org/efsavage/Bootstrap-Maven)
 
@@ -12,7 +12,7 @@ Add this to the <dependencies> element of your pom.xml
 		<dependency>
 			<groupId>com.efsavage</groupId>
 			<artifactId>twitter-bootstrap</artifactId>
-			<version>2.0.4.2</version>
+			<version>2.0.4</version>
 		</dependency>
 
 Usage
