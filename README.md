@@ -7,13 +7,13 @@ This library gives you a way to drop [Twitter Bootstrap](http://twitter.github.c
 pom.xml
 -------
 
-Add this to the <dependencies> element of your pom.xml
+Add this to the <dependencies> element of your pom.xml.  The artifact is deployed to the Maven Central Repository.
 
-		<dependency>
-			<groupId>com.efsavage</groupId>
-			<artifactId>twitter-bootstrap</artifactId>
-			<version>2.0.4</version>
-		</dependency>
+	<dependency>
+    	<groupId>com.efsavage.twitter.bootstrap</groupId>
+    	<artifactId>bootstrap-maven</artifactId>
+    	<version>2.0.4</version>
+	</dependency>
 
 Usage
 -------
