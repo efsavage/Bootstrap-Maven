@@ -12,7 +12,7 @@ Add this to the <dependencies> element of your pom.xml.  The artifact is deploye
 	<dependency>
     	<groupId>com.efsavage.twitter.bootstrap</groupId>
     	<artifactId>bootstrap-maven</artifactId>
-    	<version>2.0.4</version>
+    	<version>2.1.1</version>
 	</dependency>
 
 Usage
@@ -51,6 +51,9 @@ Note: See the [Bootstrap Changelog](https://github.com/twitter/bootstrap/wiki/Ch
 * Updated to Bootstrap version 2.0.4
 * Fixed the image servlets
 * Moved files under /ext/bootstrap/ parent directory.
+
+##2.1.1
+* Updated to Bootstrap version 2.1.1
 
 ##2.0.3
 * Updated to Bootstrap version 2.0.3
