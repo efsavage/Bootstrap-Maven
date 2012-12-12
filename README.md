@@ -12,7 +12,7 @@ Add this to the <dependencies> element of your pom.xml.  The artifact is deploye
 	<dependency>
     	<groupId>com.efsavage.twitter.bootstrap</groupId>
     	<artifactId>bootstrap-maven</artifactId>
-    	<version>2.1.1</version>
+    	<version>2.2.2</version>
 	</dependency>
 
 Usage
@@ -34,6 +34,20 @@ Minified vs. Full Versions
 -------
 The minified versions of .css and .js files are used by default, append ?min=false to see the full versions.
 
+Taglib
+-------
+This library contains a tld and tag files which will automatically be available to your web application when the jar is loaded.  To include the tag library on your JSP page, include the following directive at the top:
+
+    <%@ taglib uri="http://efsavage.com/twitter-bootstrap" prefix="bs" 
+
+You can then use the tags as specified in the taglibs.md file.  For example:
+
+    <bs:button text="Go" />
+
+will render to:
+
+    <button class="btn" type="button">Go</button>
+
 Modifications
 -------
 The files served have not been modified in any way from their original distribution.
@@ -47,13 +61,18 @@ Changelog
 -------
 Note: See the [Bootstrap Changelog](https://github.com/twitter/bootstrap/wiki/Changelog) for information about changes to the Bootstrap files themselves.
 
+##2.2.2
+* Updated to Bootstrap version 2.2.2
+* Added taglibs
+
+
+##2.1.1
+* Updated to Bootstrap version 2.1.1
+
 ##2.0.4
 * Updated to Bootstrap version 2.0.4
 * Fixed the image servlets
 * Moved files under /ext/bootstrap/ parent directory.
-
-##2.1.1
-* Updated to Bootstrap version 2.1.1
 
 ##2.0.3
 * Updated to Bootstrap version 2.0.3
