@@ -17,6 +17,20 @@ Renders a button.
 
 **Body Contents**: Ignored if attribute "text" is set.
 
+# bs:icon #
+
+Renders an icon.  
+
+[Bootstrap Docs](http://twitter.github.com/bootstrap/base-css.html#icons "Bootstrap Docs")
+
+### Attributes ###
+
+* **white**: boolean, defaults to false - renders white icon instead of black
+* **cssClass**: string - CSS class added after all standard classnames.
+* **type**: string, required (see docs for full list), defaults to nothing
+
+**Body Contents**: Ignored.
+
 # bs:table #
 
 Renders a table.  
