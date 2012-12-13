@@ -4,6 +4,22 @@
 	<short-name>bs</short-name>
 	<uri>http://efsavage.com/twitter-bootstrap</uri>
 
+	<tag>
+		<name>tbody</name>
+		<tag-class>com.efsavage.twitter.bootstrap.servlet.filter.TBodyTag
+		</tag-class>
+		<attribute>
+			<name>items</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>var</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
 	<tag-file>
 		<name>button</name>
 		<path>/META-INF/tags/twitter/bootstrap/button.tag</path>

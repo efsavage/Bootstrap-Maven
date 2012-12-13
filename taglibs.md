@@ -16,3 +16,16 @@ Renders a button.
 * **type**: string (*button | submit | reset*), defaults to nothing
 
 **Body Contents**: Ignored if attribute "text" is set.
+
+# bs:tbody #
+
+Renders a tbody (Table Body).  Works like c:forEach tag, automatically injecting tbody and tr tags.
+
+[Bootstrap Docs](http://twitter.github.com/bootstrap/base-css.html#tables "Bootstrap Docs")
+
+### Attributes ###
+
+* **items**: required, collection
+* **var**, required, string
+
+**Body Contents**: The table cells (td tags)
