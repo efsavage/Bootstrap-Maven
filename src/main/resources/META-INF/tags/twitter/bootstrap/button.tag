@@ -19,5 +19,4 @@ c:when test="${style eq 'inverse'}">btn-inverse</c:when><
 c:when test="${style eq 'link'}">btn-link</c:when></c:choose> ${cssClass}" <c:if test="${disabled}">disabled="disabled"</c:if> <c:choose><
 c:when test="${type eq 'button'}">type="button"</c:when><
 c:when test="${type eq 'submit'}">type="submit"</c:when><
-c:when test="${type eq 'reset'}">type="reset"</c:when><
-></c:choose><c:choose><c:when test="${!empty text}">${text}</c:when></c:otherwise><jsp:doBody /></c:otherwise></c:choose></button>
+c:when test="${type eq 'reset'}">type="reset"</c:when></c:choose>><c:choose><c:when test="${!empty text}">${text}</c:when><c:otherwise><jsp:doBody /></c:otherwise></c:choose></button>
