@@ -30,4 +30,9 @@
 		<path>/META-INF/tags/twitter/bootstrap/table.tag</path>
 	</tag-file>
 
+	<tag-file>
+		<name>tr</name>
+		<path>/META-INF/tags/twitter/bootstrap/tr.tag</path>
+	</tag-file>
+
 </taglib>

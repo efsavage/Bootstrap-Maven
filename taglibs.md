@@ -32,7 +32,7 @@ Renders a table.
 * **hover**: boolean, defaults to false - enables hover effect
 * **striped**: boolean, defaults to false - renders alternating color rows
 
-**Body Contents**: Ignored if attribute "text" is set.
+**Body Contents**: Processed normally, should contain thead and bs:tbody tags.
 
 # bs:tbody #
 
@@ -46,3 +46,16 @@ Renders a tbody (Table Body).  Works like c:forEach tag, automatically injecting
 * **var**, required, string
 
 **Body Contents**: The table cells (td tags)
+
+# bs:tr #
+
+Renders a tr (table row).  Note that you do not need to include bs:tr tags in a bs:tbody body, they will automatically be inserted.
+
+[Bootstrap Docs](http://twitter.github.com/bootstrap/base-css.html#tables "Bootstrap Docs")
+
+### Attributes ###
+
+* **cssClass**: string - CSS class added after all standard classnames.
+* **type**: string (*success | error | warning | info*), defaults to nothing - row type for coloring
+
+**Body Contents**: Processed normally.
