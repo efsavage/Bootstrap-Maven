@@ -40,7 +40,7 @@ public class BootstrapGlyphIconsWhiteServlet extends HttpServlet {
 		resp.setContentType("image/png");
 		final String src = "/com/twitter/bootstrap/img/glyphicons-halflings-white.png";
 		final InputStream imgStream = getClass().getResourceAsStream(src);
-		OutputStream out = resp.getOutputStream();
+		final OutputStream out = resp.getOutputStream();
 		final byte[] buffer = new byte[1024];
 		int read;
 		while ((read = imgStream.read(buffer)) != -1) {

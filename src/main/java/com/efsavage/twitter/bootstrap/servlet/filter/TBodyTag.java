@@ -33,8 +33,22 @@ import javax.servlet.jsp.tagext.TagSupport;
  */
 public class TBodyTag extends TagSupport {
 
+	private static boolean isEmpty(final Object object) {
+		if (object == null) {
+			return true;
+		}
+		if (object instanceof Collection<?>) {
+			if (((Collection<?>) object).size() > 0) {
+				return false;
+			}
+		}
+		System.err.println("Cannot handle items attribute of class: " + object.getClass().getName());
+		return true;
+	}
+
 	private Object items;
 	private String var;
+
 	private Iterator<?> iterator = null;
 
 	@Override
@@ -52,7 +66,7 @@ public class TBodyTag extends TagSupport {
 			}
 			this.pageContext.getOut().write("\t</tr\n</tbody>");
 			return SKIP_BODY;
-		} catch (IOException e) {
+		} catch (final IOException e) {
 			throw new JspException(e);
 		}
 	}
@@ -87,32 +101,11 @@ public class TBodyTag extends TagSupport {
 		}
 	}
 
-	private static boolean isEmpty(final Object object) {
-		if (object == null) {
-			return true;
-		}
-		if (object instanceof Collection<?>) {
-			if (((Collection<?>) object).size() > 0) {
-				return false;
-			}
-		}
-		System.err.println("Cannot handle items attribute of class: " + object.getClass().getName());
-		return true;
-	}
-
 	/**
 	 * @return the items
 	 */
 	public Object getItems() {
 		return this.items;
-	}
-
-	/**
-	 * @param items
-	 *            the items to set
-	 */
-	public void setItems(Object items) {
-		this.items = items;
 	}
 
 	/**
@@ -123,10 +116,18 @@ public class TBodyTag extends TagSupport {
 	}
 
 	/**
+	 * @param items
+	 *            the items to set
+	 */
+	public void setItems(final Object items) {
+		this.items = items;
+	}
+
+	/**
 	 * @param var
 	 *            the var to set
 	 */
-	public void setVar(String var) {
+	public void setVar(final String var) {
 		this.var = var;
 	}
 
