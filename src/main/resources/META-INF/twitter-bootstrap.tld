@@ -25,4 +25,9 @@
 		<path>/META-INF/tags/twitter/bootstrap/button.tag</path>
 	</tag-file>
 
+	<tag-file>
+		<name>table</name>
+		<path>/META-INF/tags/twitter/bootstrap/table.tag</path>
+	</tag-file>
+
 </taglib>
