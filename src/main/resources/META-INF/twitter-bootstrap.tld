@@ -40,4 +40,14 @@
 		<path>/META-INF/tags/twitter/bootstrap/tr.tag</path>
 	</tag-file>
 
+	<tag-file>
+		<name>btn-group</name>
+		<path>/META-INF/tags/twitter/bootstrap/btn-group.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>btn-toolbar</name>
+		<path>/META-INF/tags/twitter/bootstrap/btn-toolbar.tag</path>
+	</tag-file>
+
 </taglib>
