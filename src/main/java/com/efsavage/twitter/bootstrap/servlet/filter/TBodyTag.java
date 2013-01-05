@@ -53,7 +53,6 @@ public class TBodyTag extends TagSupport {
 
 	@Override
 	public int doAfterBody() throws JspException {
-		System.out.println("doAfterBody");
 		try {
 			if (this.iterator != null && this.iterator.hasNext()) {
 				this.pageContext.getOut().write("\t</tr>\n\t<tr>");
@@ -78,7 +77,6 @@ public class TBodyTag extends TagSupport {
 	 */
 	@Override
 	public int doStartTag() throws JspException {
-		System.out.println("doStartTag");
 		try {
 			this.pageContext.getOut().write("<tbody>");
 			if (isEmpty(this.items)) {
