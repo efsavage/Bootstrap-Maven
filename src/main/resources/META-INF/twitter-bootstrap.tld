@@ -21,6 +21,16 @@
 	</tag>
 
 	<tag-file>
+		<name>btn-group</name>
+		<path>/META-INF/tags/twitter/bootstrap/btn-group.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>btn-toolbar</name>
+		<path>/META-INF/tags/twitter/bootstrap/btn-toolbar.tag</path>
+	</tag-file>
+
+	<tag-file>
 		<name>button</name>
 		<path>/META-INF/tags/twitter/bootstrap/button.tag</path>
 	</tag-file>
@@ -28,6 +38,11 @@
 	<tag-file>
 		<name>icon</name>
 		<path>/META-INF/tags/twitter/bootstrap/icon.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>modal</name>
+		<path>/META-INF/tags/twitter/bootstrap/modal.tag</path>
 	</tag-file>
 
 	<tag-file>
@@ -40,14 +55,5 @@
 		<path>/META-INF/tags/twitter/bootstrap/tr.tag</path>
 	</tag-file>
 
-	<tag-file>
-		<name>btn-group</name>
-		<path>/META-INF/tags/twitter/bootstrap/btn-group.tag</path>
-	</tag-file>
-
-	<tag-file>
-		<name>btn-toolbar</name>
-		<path>/META-INF/tags/twitter/bootstrap/btn-toolbar.tag</path>
-	</tag-file>
 
 </taglib>
