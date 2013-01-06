@@ -1,5 +1,29 @@
 All attributes are optional unless otherwise stated.
 
+# bs:btn-group #
+
+Renders a button group element (div.btn-group).
+
+[Bootstrap Docs](http://twitter.github.com/bootstrap/components.html#buttonGroups "Bootstrap Docs")
+
+### Attributes ###
+
+*None*
+
+**Body Contents**: Processed normally.
+
+# bs:btn-toolbar #
+
+Renders a button toolbar element (div.btn-toolbar).
+
+[Bootstrap Docs](http://twitter.github.com/bootstrap/components.html#buttonGroups "Bootstrap Docs")
+
+### Attributes ###
+
+* **group**: boolean, defaults to false.  If true, will wrap body in a bs:btn-group element (for toolbars with only one group)
+
+**Body Contents**: Processed normally.
+
 # bs:button #
 
 Renders a button.  
@@ -13,7 +37,11 @@ Renders a button.
 * **size**, (*large | small | mini*) defaults to nothing
 * **style**: string (*primary | info | success | warning | danger | inverse | link*), defaults to nothing
 * **text**: string, defaults to nothing
+* **href**: string, defaults to nothing.  If present, will render button as an < a > tag.
 * **type**: string (*button | submit | reset*), defaults to nothing
+* **modal**: string, defaults to nothing.  If present, will render the data-toggle attribute and populat or override the href attribute.
+* **icon**: string, defaults to nothing.  If present, will insert a bs:icon tag to the left of the text, unless changed by iconPos attribute
+* **iconPos**: (right | left), defaults to left
 
 **Body Contents**: Ignored if attribute "text" is set.
 
@@ -30,6 +58,21 @@ Renders an icon.
 * **type**: string, required (see docs for full list), defaults to nothing
 
 **Body Contents**: Ignored.
+
+# bs:modal #
+
+Renders a modal window.
+
+[Bootstrap Docs](http://twitter.github.com/bootstrap/javascript.html#modals "Bootstrap Docs")
+
+### Attributes ###
+
+* **id**: string, required.  The ID to use for the modal element, should tie into whatever component will invoke it (such as modal attribute of the bs:button tag).
+* **cancelText**: string, defaults to "Cancel".  This is the text of the text for the cancel button.
+* **headerText**: string, defaults to nothing.  If present, a header will be included in the modal with the specified text.
+* **submitText**: string, defaults to "OK".  This is the text of the text for the submit button.
+
+**Body Contents**: Processed normally.
 
 # bs:table #
 
