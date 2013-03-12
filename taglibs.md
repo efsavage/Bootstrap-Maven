@@ -34,14 +34,16 @@ Renders a button.
 
 * **block**: boolean, defaults to false - renders button as block element
 * **cssClass**: string - CSS class added after all standard classnames.
+* **href**: string, defaults to nothing.  If present, will render button as an < a > tag.
+* **icon**: string, defaults to nothing.  If present, will insert a bs:icon tag to the left of the text, unless changed by iconPos attribute
+* **iconPos**: (right | left), defaults to left
+* **modal**: string, defaults to nothing.  If present, will render the data-toggle attribute and populat or override the href attribute.
+* **name**: string, defaults to nothing.  If present, will render the name attribute
 * **size**, (*large | small | mini*) defaults to nothing
 * **style**: string (*primary | info | success | warning | danger | inverse | link*), defaults to nothing
 * **text**: string, defaults to nothing
-* **href**: string, defaults to nothing.  If present, will render button as an < a > tag.
 * **type**: string (*button | submit | reset*), defaults to nothing
-* **modal**: string, defaults to nothing.  If present, will render the data-toggle attribute and populat or override the href attribute.
-* **icon**: string, defaults to nothing.  If present, will insert a bs:icon tag to the left of the text, unless changed by iconPos attribute
-* **iconPos**: (right | left), defaults to left
+* **value**: string, defaults to nothing.  If present, will render the value attribute
 
 **Body Contents**: Ignored if attribute "text" is set.
 

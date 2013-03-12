@@ -12,7 +12,7 @@ Add this to the <dependencies> element of your pom.xml.  The artifact is deploye
 	<dependency>
     	<groupId>com.efsavage.twitter.bootstrap</groupId>
     	<artifactId>bootstrap-maven</artifactId>
-    	<version>2.2.2</version>
+    	<version>2.3.1</version>
 	</dependency>
 
 Usage
@@ -61,10 +61,13 @@ Changelog
 -------
 Note: See the [Bootstrap Changelog](https://github.com/twitter/bootstrap/wiki/Changelog) for information about changes to the Bootstrap files themselves.
 
+##2.3.1
+* Updated to Bootstrap version 2.3.1
+* Additional taglibs
+
 ##2.2.2
 * Updated to Bootstrap version 2.2.2
 * Added taglibs
-
 
 ##2.1.1
 * Updated to Bootstrap version 2.1.1
